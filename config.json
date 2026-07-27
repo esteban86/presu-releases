@@ -1,0 +1,16 @@
+{
+  "_nota": "Config remota de Presu. La app la lee al arrancar y la cachea. Cambiarla NO requiere un release. Dos interruptores: 'betaGateEnabled' decide si hace falta un codigo de pionero para pasar el onboarding (false = abierta a quien descargue). 'paywallEnabled' decide si los candados de plan muerden (false = todos tienen todo). OJO: no prender el paywall hasta que este publicado un release que incluya el plan gratis con funciones (PR #506); antes de eso, 'gratis' significa ninguna funcion.",
+  "betaGateEnabled": false,
+  "paywallEnabled": false,
+  "prices": {
+    "proMonthly": "$19.990",
+    "proAnnual": "$199.990",
+    "familyMonthly": "$34.990",
+    "pioneerMonthly": "$12.990",
+    "empresaPerSeat": [
+      { "range": "10–50", "price": "$5.900" },
+      { "range": "51–200", "price": "$4.900" },
+      { "range": "200+", "price": "$3.900" }
+    ]
+  }
+}
