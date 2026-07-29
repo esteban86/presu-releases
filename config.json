@@ -1,5 +1,5 @@
 {
-  "_nota": "Config remota de Presu. La app la lee al arrancar y la cachea. Cambiarla NO requiere un release. Dos interruptores: 'betaGateEnabled' decide si hace falta un codigo de pionero para pasar el onboarding (false = abierta a quien descargue). 'paywallEnabled' decide si los candados de plan muerden (false = todos tienen todo). OJO: no prender el paywall hasta que este publicado un release que incluya el plan gratis con funciones (PR #506); antes de eso, 'gratis' significa ninguna funcion.",
+  "_nota": "Config remota de Presu. La app la lee al arrancar y la cachea. Cambiarla NO requiere un release. Dos interruptores: 'betaGateEnabled' decide si hace falta un codigo de pionero para pasar el onboarding (false = abierta a quien descargue). 'paywallEnabled' decide si los candados de plan muerden (false = todos tienen todo). OJO: no prender el paywall hasta que este publicado un release que incluya el plan gratis con funciones (PR #506); antes de eso, 'gratis' significa ninguna funcion. La llave 'banks' es el contrato de cobertura: que bancos y productos lee Presu (ok) y cuales queremos (wanted). La lee la pagina /aporta via el Worker. IMPORTANTE: el 'id' debe ser exactamente el slug del 'name' (minusculas, sin tildes, guiones) porque asi es como el Worker guarda los contadores de aportes.",
   "betaGateEnabled": false,
   "paywallEnabled": false,
   "prices": {
@@ -11,6 +11,40 @@
       { "range": "10–50", "price": "$5.900" },
       { "range": "51–200", "price": "$4.900" },
       { "range": "200+", "price": "$3.900" }
+    ]
+  },
+  "banks": {
+    "CO": [
+      { "id": "bancolombia", "name": "Bancolombia", "aliases": [],
+        "products": { "cuenta": "ok", "tarjeta": "ok" } },
+      { "id": "davivienda", "name": "Davivienda", "aliases": [],
+        "products": { "cuenta": "ok", "tarjeta": "ok" } },
+      { "id": "nu", "name": "Nu", "aliases": ["nubank", "nu-colombia"],
+        "products": { "cuenta": "wanted", "tarjeta": "ok" } },
+      { "id": "rappicard", "name": "RappiCard", "aliases": ["rappipay-rappicard", "rappipay"],
+        "products": { "tarjeta": "ok" } },
+      { "id": "scotiabank-colpatria", "name": "Scotiabank Colpatria", "aliases": ["scotiabank", "colpatria", "davibank"],
+        "products": { "cuenta": "wanted", "tarjeta": "ok" } },
+      { "id": "banco-de-bogota", "name": "Banco de Bogotá", "aliases": ["bogota"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "bbva", "name": "BBVA", "aliases": ["bbva-colombia"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "banco-de-occidente", "name": "Banco de Occidente", "aliases": ["occidente"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "banco-popular", "name": "Banco Popular", "aliases": ["popular"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "banco-caja-social", "name": "Banco Caja Social", "aliases": ["caja-social"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "av-villas", "name": "AV Villas", "aliases": ["banco-av-villas"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "banco-falabella", "name": "Banco Falabella", "aliases": ["falabella", "cmr"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "banco-serfinanza", "name": "Banco Serfinanza", "aliases": ["serfinanza", "olimpica"],
+        "products": { "cuenta": "wanted", "tarjeta": "wanted" } },
+      { "id": "nequi", "name": "Nequi", "aliases": [],
+        "products": { "cuenta": "wanted" } },
+      { "id": "daviplata", "name": "Daviplata", "aliases": [],
+        "products": { "cuenta": "wanted" } }
     ]
   }
 }
