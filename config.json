@@ -2,6 +2,11 @@
   "_nota": "Config remota de Presu. La app la lee al arrancar y la cachea. Cambiarla NO requiere un release. Dos interruptores: 'betaGateEnabled' decide si hace falta un codigo de pionero para pasar el onboarding (false = abierta a quien descargue). 'paywallEnabled' decide si los candados de plan muerden (false = todos tienen todo). OJO: no prender el paywall hasta que este publicado un release que incluya el plan gratis con funciones (PR #506); antes de eso, 'gratis' significa ninguna funcion. La llave 'banks' es el contrato de cobertura: que bancos y productos lee Presu (ok) y cuales queremos (wanted). La lee la pagina /aporta via el Worker. IMPORTANTE: el 'id' debe ser exactamente el slug del 'name' (minusculas, sin tildes, guiones) porque asi es como el Worker guarda los contadores de aportes.",
   "betaGateEnabled": false,
   "paywallEnabled": false,
+  "mobileMinVersion": { "ios": "1.21.0", "android": "1.21.0" },
+  "mobileStoreUrl": {
+    "ios": "https://apps.apple.com/app/id6791307843",
+    "android": "market://details?id=io.presu.app"
+  },
   "prices": {
     "proMonthly": "$19.990",
     "proAnnual": "$199.990",
