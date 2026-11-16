@@ -3,6 +3,7 @@
   "betaGateEnabled": false,
   "paywallEnabled": false,
   "partirMovimientos": true,
+  "fijoMarcadoStaging": true,
   "mobileMinVersion": { "ios": "1.21.0", "android": "1.21.0" },
   "mobileStoreUrl": {
     "ios": "https://apps.apple.com/app/id6791307843",
